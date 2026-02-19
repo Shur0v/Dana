@@ -42,13 +42,13 @@ export const EducationSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 md:py-40 bg-cream">
+    <section id="journal" className="py-24 md:py-40 bg-cream">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 gap-8">
           <div className="max-w-2xl">
             <span className="text-terracotta tracking-[0.4em] uppercase text-[10px] font-bold mb-6 block">The Journal</span>
-            <h2 className="font-serif text-5xl md:text-8xl text-charcoal leading-[0.9]">
+            <h2 className="font-serif text-4xl md:text-8xl text-charcoal leading-[1] md:leading-[0.9]">
               Empower Through <br /> <span className="italic">Proactive Insight.</span>
             </h2>
           </div>
@@ -60,16 +60,16 @@ export const EducationSection: React.FC = () => {
         {/* Row 1: Asymmetrical Hero + Stacked */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 mb-20">
           <div className="md:col-span-8 group cursor-pointer">
-            <div className="relative overflow-hidden rounded-[50px] aspect-[16/10] mb-8 shadow-sm group-hover:shadow-2xl transition-all duration-700">
+            <div className="relative overflow-hidden rounded-[30px] md:rounded-[50px] aspect-[16/10] mb-8 shadow-sm group-hover:shadow-2xl transition-all duration-700">
               <img 
                 src={articles[0].img} 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" 
                 alt={articles[0].title}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent" />
-              <div className="absolute bottom-12 left-12 right-12">
+              <div className="absolute bottom-8 left-8 right-8 md:bottom-12 md:left-12 md:right-12">
                  <span className="text-white/80 tracking-[0.3em] uppercase text-[10px] mb-4 block font-bold">{articles[0].category}</span>
-                 <h3 className="text-white font-serif text-3xl md:text-6xl max-w-xl">{articles[0].title}</h3>
+                 <h3 className="text-white font-serif text-2xl md:text-6xl max-w-xl">{articles[0].title}</h3>
               </div>
             </div>
           </div>
@@ -77,7 +77,7 @@ export const EducationSection: React.FC = () => {
           <div className="md:col-span-4 flex flex-col gap-10">
             {articles.slice(1, 3).map((article, i) => (
               <div key={i} className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-[40px] aspect-[4/3] mb-6 shadow-sm group-hover:shadow-xl transition-all duration-500">
+                <div className="relative overflow-hidden rounded-[30px] md:rounded-[40px] aspect-[4/3] mb-6 shadow-sm group-hover:shadow-xl transition-all duration-500">
                   <img 
                     src={article.img} 
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
@@ -85,25 +85,25 @@ export const EducationSection: React.FC = () => {
                   />
                 </div>
                 <span className="text-terracotta tracking-[0.2em] uppercase text-[9px] mb-2 block font-bold">{article.category}</span>
-                <h3 className="text-charcoal font-serif text-2xl group-hover:italic transition-all duration-300">{article.title}</h3>
+                <h3 className="text-charcoal font-serif text-xl md:text-2xl group-hover:italic group-hover:text-terracotta transition-all duration-300">{article.title}</h3>
               </div>
             ))}
           </div>
         </div>
 
         {/* Featured Series Banner */}
-        <div className="w-full bg-olive rounded-[60px] p-10 md:p-20 mb-20 relative overflow-hidden group">
+        <div className="w-full bg-olive rounded-[40px] md:rounded-[60px] p-8 md:p-20 mb-20 relative overflow-hidden group">
            <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none group-hover:rotate-12 transition-transform duration-1000">
              <img src="https://danalandgren.com/cdn/shop/files/badge.svg?v=9011792248909572116" alt="" className="w-64 h-64 invert" />
            </div>
            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
              <div className="text-cream">
                <span className="tracking-[0.4em] uppercase text-[10px] opacity-60 mb-6 block font-bold">Featured Series</span>
-               <h3 className="font-serif text-4xl md:text-6xl mb-8 leading-tight">Mastering Your <br/><span className="italic">Metabolic Health.</span></h3>
+               <h3 className="font-serif text-3xl md:text-6xl mb-8 leading-tight">Mastering Your <br/><span className="italic">Metabolic Health.</span></h3>
                <p className="text-cream/70 text-sm md:text-base leading-relaxed max-w-md mb-10">
                  A comprehensive 4-part series led by Dana Landgren on stabilizing blood sugar to optimize hormone production.
                </p>
-               <button className="bg-cream text-olive px-10 py-5 rounded-full text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-terracotta hover:text-white transition-all">
+               <button className="bg-cream text-olive px-10 py-5 rounded-full text-[10px] tracking-[0.3em] uppercase font-bold hover:bg-terracotta hover:text-white transition-all transform hover:scale-105 active:scale-95">
                  Explore the Series
                </button>
              </div>
@@ -116,7 +116,7 @@ export const EducationSection: React.FC = () => {
         </div>
 
         {/* Row 2: Grid of 3 */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mb-16">
            {articles.slice(3).map((article, i) => (
              <div key={i} className="group cursor-pointer">
                 <div className="relative overflow-hidden rounded-[30px] aspect-square mb-8 shadow-sm group-hover:shadow-xl transition-all duration-500">
@@ -138,7 +138,7 @@ export const EducationSection: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-20">
-          <button className="text-olive text-[10px] tracking-[0.4em] uppercase font-bold border border-olive/10 px-12 py-6 rounded-full hover:bg-olive hover:text-white transition-all duration-500">
+          <button className="text-olive text-[10px] tracking-[0.4em] uppercase font-bold border border-olive/10 px-12 py-6 rounded-full hover:bg-olive hover:text-white transition-all duration-500 hover:shadow-lg">
             View the Complete Archive
           </button>
         </div>

@@ -3,7 +3,7 @@ import React from 'react';
 
 export const RitualSection: React.FC = () => {
   return (
-    <section className="py-24 md:py-40 bg-sand/30 relative">
+    <section id="ritual" className="py-24 md:py-40 bg-sand/30 relative">
       <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-cream to-transparent" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -23,10 +23,10 @@ export const RitualSection: React.FC = () => {
                 { step: "02", title: "Midday Balance", desc: "Our chelated minerals support sustained cognitive clarity and mood stability." },
                 { step: "03", title: "Evening Restoration", desc: "Magnesium glycinate prepares your nervous system for cellular repair." }
               ].map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-8 group">
-                  <span className="font-serif text-3xl italic text-terracotta/40 group-hover:text-terracotta transition-colors">{item.step}</span>
+                <div key={idx} className="flex items-start space-x-8 group cursor-pointer">
+                  <span className="font-serif text-3xl italic text-terracotta/40 group-hover:text-terracotta group-hover:scale-110 transition-all">{item.step}</span>
                   <div>
-                    <h3 className="text-lg font-serif text-charcoal mb-2">{item.title}</h3>
+                    <h3 className="text-lg font-serif text-charcoal mb-2 group-hover:text-terracotta transition-colors">{item.title}</h3>
                     <p className="text-olive/60 text-sm leading-relaxed max-w-sm">{item.desc}</p>
                   </div>
                 </div>
@@ -35,7 +35,7 @@ export const RitualSection: React.FC = () => {
           </div>
 
           <div className="relative">
-             <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl bg-white border-[12px] border-white">
+             <div className="aspect-[4/5] rounded-[60px] overflow-hidden shadow-2xl bg-white border-[8px] md:border-[12px] border-white transition-transform duration-700 hover:rotate-1">
                 <img 
                   src="https://www.beactivewear.com.au/cdn/shop/files/evolve-apparel-prime-seamless-bra-champagne-38327332503721_822x1151.png?v=1696765002" 
                   alt="Daily ritual" 
@@ -43,11 +43,11 @@ export const RitualSection: React.FC = () => {
                 />
              </div>
              {/* Decorative Badge */}
-             <div className="absolute -bottom-10 -right-10 bg-olive p-10 rounded-full shadow-2xl hidden md:block">
+             <div className="absolute -bottom-6 -right-6 md:-bottom-10 md:-right-10 bg-olive p-6 md:p-10 rounded-full shadow-2xl">
                 <img 
                   src="https://danalandgren.com/cdn/shop/files/badge.svg?v=9011792248909572116" 
                   alt="Badge" 
-                  className="w-20 h-20 invert opacity-90"
+                  className="w-12 h-12 md:w-20 md:h-20 invert opacity-90 animate-[spin_20s_linear_infinite]"
                 />
              </div>
           </div>

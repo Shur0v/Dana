@@ -3,25 +3,25 @@ import React from 'react';
 
 export const FounderStory: React.FC = () => {
   return (
-    <section className="py-24 md:py-40 bg-sand relative overflow-hidden">
+    <section id="story" className="py-24 md:py-40 bg-sand relative overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-cream -skew-x-6 translate-x-12" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-cream -skew-x-6 translate-x-12 hidden lg:block" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
-        <div className="lg:col-span-5 relative h-[500px] md:h-[700px]">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center relative z-10">
+        <div className="lg:col-span-5 relative h-[400px] md:h-[600px] lg:h-[700px]">
           {/* Overlapping Images */}
-          <div className="absolute top-0 left-0 w-[80%] h-[80%] rounded-2xl overflow-hidden shadow-2xl z-20 translate-y-10">
+          <div className="absolute top-0 left-0 w-[75%] md:w-[80%] h-[75%] md:h-[80%] rounded-2xl overflow-hidden shadow-2xl z-20 translate-y-6 md:translate-y-10 group cursor-pointer transition-transform duration-500 hover:scale-[1.02]">
              <img 
                src="https://www.beactivewear.com.au/cdn/shop/files/ceacea-swimwear-luna-crop-light-pink-1195478250_940x1180.png?v=1759205798" 
                alt="Dana Landgren - Intentional Design" 
                className="w-full h-full object-cover"
              />
           </div>
-          <div className="absolute bottom-0 right-0 w-[60%] h-[60%] rounded-2xl overflow-hidden shadow-2xl z-10">
+          <div className="absolute bottom-0 right-0 w-[55%] md:w-[60%] h-[55%] md:h-[60%] rounded-2xl overflow-hidden shadow-2xl z-10 grayscale opacity-80 group cursor-pointer transition-transform duration-500 hover:scale-[1.02]">
              <img 
                src="https://www.beactivewear.com.au/cdn/shop/files/ceacea-leggings-lembongan-surf-leggings-chocolate-1195478604_561x703.png?v=1759211909" 
                alt="Wellness Lifestyle Textures" 
-               className="w-full h-full object-cover grayscale opacity-80"
+               className="w-full h-full object-cover"
              />
           </div>
           {/* Abstract Floating Element */}
@@ -31,13 +31,13 @@ export const FounderStory: React.FC = () => {
         <div className="lg:col-span-7 space-y-10 lg:pl-12">
           <div>
             <span className="text-terracotta tracking-[0.4em] uppercase text-xs font-semibold mb-4 block">The Founder</span>
-            <h2 className="font-serif text-5xl md:text-7xl text-charcoal mb-8 leading-tight">
+            <h2 className="font-serif text-4xl md:text-7xl text-charcoal mb-8 leading-tight">
               A Personal Path to <br />
               <span className="italic">Proactive Healing.</span>
             </h2>
           </div>
 
-          <div className="space-y-6 text-olive/80 text-lg leading-relaxed font-light">
+          <div className="space-y-6 text-olive/80 text-base md:text-lg leading-relaxed font-light">
             <p>
               "Dana Landgren wasn't born out of a boardroom. It was born in the quiet moments of my own health journey, navigating the complexities of hormonal changes and the search for truly clean, intentional support."
             </p>
@@ -48,10 +48,10 @@ export const FounderStory: React.FC = () => {
 
           <div className="pt-8 border-t border-charcoal/10">
             <div className="flex items-center space-x-6">
-              <div className="w-16 h-px bg-charcoal" />
-              <div className="font-serif italic text-2xl text-charcoal">Dana Landgren</div>
+              <div className="w-12 md:w-16 h-px bg-charcoal" />
+              <div className="font-serif italic text-xl md:text-2xl text-charcoal">Dana Landgren</div>
             </div>
-            <p className="text-[10px] tracking-[0.3em] uppercase text-olive/50 mt-2 ml-24">Founder & Lead Formulator</p>
+            <p className="text-[10px] tracking-[0.3em] uppercase text-olive/50 mt-2 ml-16 md:ml-24">Founder & Lead Formulator</p>
           </div>
         </div>
       </div>

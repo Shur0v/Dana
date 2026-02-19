@@ -3,7 +3,7 @@ import React from 'react';
 
 export const ProductFeature: React.FC = () => {
   return (
-    <section className="py-24 md:py-32 bg-cream overflow-hidden">
+    <section id="vitamin" className="py-24 md:py-32 bg-cream overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center mb-20">
           <span className="text-terracotta tracking-[0.4em] uppercase text-xs font-semibold mb-4 block">The Launch</span>
@@ -28,15 +28,15 @@ export const ProductFeature: React.FC = () => {
                         />
                     </div>
 
-                    {/* Ingredient Callouts - Repositioned for the new image */}
-                    <div className="absolute -top-10 -right-4 md:-right-20 bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-oat max-w-[200px] z-20">
-                        <span className="text-terracotta font-serif italic text-lg block mb-1">Ashwagandha</span>
-                        <p className="text-[10px] text-olive/70 leading-relaxed uppercase tracking-wider font-medium">Premium KSM-66 root extract for cortisol balance and adrenal resilience.</p>
+                    {/* Ingredient Callouts - Adjusted responsive visibility */}
+                    <div className="absolute -top-10 -right-4 md:-right-20 bg-white/80 backdrop-blur-md p-4 md:p-6 rounded-2xl shadow-xl border border-oat max-w-[150px] md:max-w-[200px] z-20">
+                        <span className="text-terracotta font-serif italic text-base md:text-lg block mb-1">Ashwagandha</span>
+                        <p className="text-[9px] md:text-[10px] text-olive/70 leading-relaxed uppercase tracking-wider font-medium">Premium KSM-66 root extract for cortisol balance.</p>
                     </div>
                     
-                    <div className="absolute bottom-10 -left-4 md:-left-20 bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-oat max-w-[200px] z-20">
-                        <span className="text-terracotta font-serif italic text-lg block mb-1">Magnesium</span>
-                        <p className="text-[10px] text-olive/70 leading-relaxed uppercase tracking-wider font-medium">Highly bioavailable glycinate for deep restorative rest and muscle ease.</p>
+                    <div className="absolute bottom-10 -left-4 md:-left-20 bg-white/80 backdrop-blur-md p-4 md:p-6 rounded-2xl shadow-xl border border-oat max-w-[150px] md:max-w-[200px] z-20">
+                        <span className="text-terracotta font-serif italic text-base md:text-lg block mb-1">Magnesium</span>
+                        <p className="text-[9px] md:text-[10px] text-olive/70 leading-relaxed uppercase tracking-wider font-medium">Highly bioavailable glycinate for deep restorative rest.</p>
                     </div>
 
                     {/* Subtle Badge Shadow Underneath */}
@@ -52,7 +52,7 @@ export const ProductFeature: React.FC = () => {
               </div>
               <h3 className="font-serif text-3xl md:text-4xl text-charcoal italic leading-tight">Restorative Rituals <br/> For The Modern Woman.</h3>
               <p className="text-olive/70 leading-relaxed text-lg font-light">
-                Most supplements focus on deficiency. We focus on harmony. Our formula supports the delicate fluctuations of your endocrine system throughout the entire month, providing a steady anchor for your nervous system.
+                Most supplements focus on deficiency. We focus on harmony. Our formula supports the delicate fluctuations of your endocrine system throughout the entire month.
               </p>
             </div>
 
@@ -71,7 +71,7 @@ export const ProductFeature: React.FC = () => {
             </div>
 
             <div className="pt-4">
-              <button className="bg-olive text-cream px-12 py-6 text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-charcoal transition-all duration-500 shadow-xl hover:shadow-2xl w-full md:w-auto">
+              <button className="bg-olive text-cream px-12 py-6 text-[10px] tracking-[0.4em] uppercase font-bold hover:bg-charcoal transition-all duration-500 shadow-xl hover:shadow-2xl w-full md:w-auto hover:-translate-y-1">
                 Secure Your Edition
               </button>
               <p className="text-[9px] text-olive/40 mt-6 tracking-widest uppercase text-center md:text-left">Strictly limited first production run.</p>
