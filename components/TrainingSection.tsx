@@ -44,7 +44,7 @@ export const TrainingSection: React.FC = () => {
                     <img 
                       src="https://danalandgren.com/cdn/shop/files/badge.svg?v=9011792248909572116" 
                       alt="Rotating Badge" 
-                      className="w-12 h-12 animate-[spin_15s_linear_infinite]"
+                      className="w-12 h-12"
                     />
                   </div>
                 </div>
